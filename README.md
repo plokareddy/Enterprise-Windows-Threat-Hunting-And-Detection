@@ -118,3 +118,14 @@ The task scheduler configuration was examined and Operational Event IDs 200 and 
 - Security Event ID 200 confirmed that the scheduled task action has started or launched the action.
 - Security Event ID 201 confirmed that the scheduled task action has completed or verified its successful compeletion.
 - The task executable and the timestamps provided the evidence for correlating activity with its attack timeline.
+
+## 11. MITRE ATT&CK Mapping
+| Observed Activity | MITRE ATT&CK Technique | Technique ID |
+|---|---|---|
+| System reconnaissance using `whoami` | System Owner/User Discovery | T1033 |
+| Hostname and system information discovery | System Information Discovery | T1082 |
+| Network configuration discovery using `ipconfig /all` | System Network Configuration Discovery | T1016 |
+| Local account enumeration using `Get-LocalUser` | Account Discovery: Local Account | T1087.001 |
+| Local `helpdesk` account creation | Create Account: Local Account | T1136.001 |
+| Addition of `helpdesk` to the Administrators group | Account Manipulation: Additional Cloud Roles | T1098 |
+| Scheduled task `UpdateService` used for persistence | Scheduled Task/Job: Scheduled Task | T1053.005 |
